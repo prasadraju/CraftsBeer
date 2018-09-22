@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical"
+    android:paddingBottom="10dp"
+    android:paddingRight="16dp"
+    android:paddingTop="10dp">
+
+    <ImageView
+        android:id="@+id/beer"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:paddingTop="16dp"
+        android:src="@drawable/beer" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/beer"
+        android:paddingLeft="8dp">
+
+
+        <RelativeLayout
+            android:id="@+id/main_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/margin_4"
+                android:text="Title"
+                android:textColor="@color/black"
+                android:textSize="17sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:gravity="end"
+                android:orientation="horizontal"
+                android:paddingRight="8dp">
+
+                <ImageView
+                    android:id="@+id/iv_minus"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:src="@drawable/minus" />
+
+                <TextView
+                    android:id="@+id/qnt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="0"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/iv_plus"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+
+                    android:src="@drawable/plus" />
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/middle_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/main_layout"
+            android:layout_marginBottom="@dimen/margin_4">
+
+            <TextView
+                android:id="@+id/beer_style_heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Beer Style     "
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/beer_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/beer_style_heading"
+                android:text="Sub Title" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/middle_layout">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Alcohol Content"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/alcohol_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/margin_12"
+                android:gravity="end"
+                android:text="7.0"
+                android:textSize="18sp"
+                android:textColor="@color/green" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <!--android:layout_marginLeft="@dimen/margin_16"-->
+
+
+</RelativeLayout>
